@@ -6,10 +6,11 @@ jobs:
       - image: alpine:latest
     steps:
       - checkout
-      - command: |
-          echo "Hello world"
-          ls
-          pwd
+      - run:
+          command: |
+            echo "Hello world"
+            ls
+            pwd
   print_world:
     docker:
       - image: alpine:latest
