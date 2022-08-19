@@ -5,8 +5,11 @@ jobs:
     docker:
       - image: alpine:latest
     steps:
-      # - checkout
-      - run: echo hello
+      - checkout
+      - command: |
+          echo "Hello world"
+          ls
+          pwd
   print_world:
     docker:
       - image: alpine:latest
