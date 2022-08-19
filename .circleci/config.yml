@@ -9,6 +9,7 @@ jobs:
       - run:
           name: "Run unit tests"
           command: |
+            echo "docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}"
             cd unit-testing
             npm install
             npm run test
